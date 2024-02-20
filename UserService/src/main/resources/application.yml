@@ -1,0 +1,33 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import: optional:configserver:http://localhost:8083
+
+  application:
+    name: USER-SERVICE
+
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-90740018.okta.com/oauth2/default
+      client:
+        registration:
+          my-internal-client:
+            provider: okta
+            authorizationGrantType: client_credentials
+            scope: internal
+            client-id: 0oab6gu33kgcRpJaQ5d7
+            client-secret: VQa0rKfSy7szZDqhVKBiSUKAPsmdL4U8Il7BvsWMZu0bUO4mO1FgQCltk0oV_aZj
+
+        provider:
+          okta:
+            issuerUri: https://dev-90740018.okta.com/oauth2/ausb6gvvxiOYVubbP5d7
+
+
+
+
+

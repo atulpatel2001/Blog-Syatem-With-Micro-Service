@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: CONTENT-SERVICE
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+
+
+
+  config:
+    import: optional:configserver:http://localhost:8083
+

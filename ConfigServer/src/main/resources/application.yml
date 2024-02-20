@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/atulpatel2001/BLOGWITHMICROSERVICE
+          clone-on-start: true
+
+
+
+
+
+
